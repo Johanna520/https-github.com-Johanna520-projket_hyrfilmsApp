@@ -4,9 +4,7 @@ using System.Text;
 
 namespace DatabaseConnection
 {
-    class Model
-    {
-        
+ 
         public class Customer
         {
             public int CustomerId { get; set; }            //PK
@@ -52,5 +50,5 @@ namespace DatabaseConnection
             public string LastName { get; set; }
         }       
                  
-    }
+   
 }
