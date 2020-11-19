@@ -70,8 +70,37 @@ namespace DatabaseConnection
 
                 ctx.AddRange(new List<LeadActor>
                 {
-
-                });
+                    new LeadActor {FirstName ="Christian",      LastName ="Bale", Movies = },   //The Dark Knight
+                    new LeadActor {FirstName ="Heath",          LastName ="Ledger"},
+                    new LeadActor {FirstName ="Elijah",         LastName ="Wood"},              //The Lord of the Ring
+                    new LeadActor {FirstName ="Ian",            LastName ="McKellen"},
+                    new LeadActor {FirstName ="Leonardo ",      LastName ="DiCaprio"},          //Inception
+                    new LeadActor {FirstName ="Joseph ",        LastName ="Gordon-Levitt"},
+                    new LeadActor {FirstName ="Keanu",          LastName ="Reeves"},            //Matrix
+                    new LeadActor {FirstName ="Laurence",       LastName ="Fishburne"},
+                    new LeadActor {FirstName ="Harrison ",      LastName ="Ford"},              //Star Wars
+                    new LeadActor {FirstName ="Carrie ",        LastName ="Fisher"},
+                    new LeadActor {FirstName ="Morgan",         LastName ="Freeman"},           //se7en
+                    new LeadActor {FirstName ="Brad",           LastName ="Pitt"},
+                    new LeadActor {FirstName ="Jodie",          LastName ="Foster"},            //The Silence of the Lambs
+                    new LeadActor {FirstName ="Anthony",        LastName ="Hopkins"},
+                    new LeadActor {FirstName ="Joaquin",        LastName ="Phoenix"},           //Joker
+                    new LeadActor {FirstName ="Robert",         LastName ="De Niro"},
+                    new LeadActor {FirstName ="Leonardo",       LastName ="DiCaprio"},          //Shutter Island !!LEO IGEN??
+                    new LeadActor {FirstName ="Emily",          LastName ="Mortimer"},
+                    new LeadActor {FirstName ="Ben",            LastName ="Affleck"},           //Gone Girl
+                    new LeadActor {FirstName ="Rosamund ",      LastName ="Pike"},
+                    new LeadActor {FirstName ="Tom",            LastName ="Hanks"},             //Forest Gump
+                    new LeadActor {FirstName ="Robin",          LastName ="Wright"},
+                    new LeadActor {FirstName ="Ryan ",          LastName ="Gosling"},           //La La Land
+                    new LeadActor {FirstName ="Emma",           LastName ="Stone"},
+                    new LeadActor {FirstName ="Humphrey",       LastName ="Bogart"},            //Casablanca
+                    new LeadActor {FirstName ="Ingrid",         LastName ="Bergman"},
+                    new LeadActor {FirstName ="Dev",            LastName ="Patel"},             //Slumdog Millionare
+                    new LeadActor {FirstName ="Freida",         LastName ="Pinto"},
+                    new LeadActor {FirstName ="Roberto",        LastName ="Benigni"},            //La vita è bella
+                    new LeadActor {FirstName ="Nicoletta",      LastName ="Braschi"},
+                }); 
 
                 ctx.SaveChanges();
             }
