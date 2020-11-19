@@ -25,7 +25,29 @@ namespace DatabaseConnection
 
                 });
 
+                var Movies = new List<Movie>();
+                var lines = File.ReadAllLines(@""); // vet ej hur jag skriver rätt patch... 
+                                                    //(hela path = C:\Users\Johan\source\repos\projektDatalagring\DatabaseConnection\SeedData\MovieGenre.csv )
+
+
+
                 ctx.AddRange(new List<Rental>
+                {
+                    new Rental { RentalDate = "2020-10-19"},
+                    new Rental { RentalDate = "2020-10-31"},
+                    new Rental { RentalDate = "2020-10-31"},
+                    new Rental { RentalDate = "2020-11-01"},
+                    new Rental { RentalDate = "2020-11-10"}
+                }) ;
+
+                ctx.AddRange(new List<Genre>
+                { 
+
+                });
+
+
+
+                ctx.AddRange(new List<LeadActor>
                 {
 
                 });
