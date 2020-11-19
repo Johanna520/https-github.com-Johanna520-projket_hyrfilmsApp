@@ -25,9 +25,30 @@ namespace DatabaseConnection
 
                 });
 
-                var Movies = new List<Movie>();
-                var lines = File.ReadAllLines(@""); // vet ej hur jag skriver rätt patch... 
-                                                    //(hela path = C:\Users\Johan\source\repos\projektDatalagring\DatabaseConnection\SeedData\MovieGenre.csv )
+                ctx.AddRange(new List<Movie>
+                {
+                    new Movie {Title = "The Dark Knight",                                   Year = 2008, ImbdRating = 9.0},
+                    new Movie {Title = "The Lord of the Rings: The Return of the Kingt",    Year = 2003, ImbdRating = 8.9},
+                    new Movie {Title = "Inception",                                         Year = 2010, ImbdRating = 8.8},
+                    new Movie {Title = "Matrix",                                            Year = 2008, ImbdRating = 9.0},
+                    new Movie {Title = "Star Warst",                                        Year = 1977, ImbdRating = 8.6},
+                    new Movie {Title = "The Lion King",                                     Year = 1994, ImbdRating = 8.5},
+                    new Movie {Title = "WALL-E",                                            Year = 2008, ImbdRating = 8.4},
+                    new Movie {Title = "Toy Story",                                         Year = 2008, ImbdRating = 9.0},
+                    new Movie {Title = "Up",                                                Year = 2009, ImbdRating = 8.2},
+                    new Movie {Title = "Finding Nemo",                                      Year = 2003, ImbdRating = 8.1},
+                    new Movie {Title = "Se7en",                                             Year = 1995, ImbdRating = 8.6},
+                    new Movie {Title = "The Silence of the Lambs",                          Year = 1991, ImbdRating = 8.6},
+                    new Movie {Title = "Joker",                                             Year = 2019, ImbdRating = 8.5},
+                    new Movie {Title = "Shutter Island",                                    Year = 2010, ImbdRating = 8.2},
+                    new Movie {Title = "Gone Girl",                                         Year = 2014, ImbdRating = 8.1},
+                    new Movie {Title = "Forest Gump",                                       Year = 1994, ImbdRating = 8.8},
+                    new Movie {Title = "La La Land",                                        Year = 2016, ImbdRating = 8.0},
+                    new Movie {Title = "Casablanca",                                        Year = 1942, ImbdRating = 8.5},
+                    new Movie {Title = "Slumdog Millionare",                                Year = 2008, ImbdRating = 8.0},
+                    new Movie {Title = "La vita è bella",                                   Year = 1997, ImbdRating = 8.6},
+                
+                });
 
 
 
@@ -42,7 +63,7 @@ namespace DatabaseConnection
 
                 ctx.AddRange(new List<Genre>
                 { 
-
+                    
                 });
 
 
