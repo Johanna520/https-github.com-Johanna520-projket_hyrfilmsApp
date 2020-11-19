@@ -12,7 +12,7 @@ namespace DatabaseConnection
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Birthday { get; set; }
-        public virtual List<Rental> Rentals { get; set; }       //Vid användnig av LazyLoading lägg till: virtual efter public
+        public virtual List<Rental> Rentals { get; set; }      
 
     }
     public class Movie
@@ -36,10 +36,9 @@ namespace DatabaseConnection
         public int RentalId { get; set; }      // PK
         public string RentalDate { get; set; }     //Obs... Här går även göra en datetime och därefter ev. göra en parse. 
                                                     //Kolla med Alexander F isåfall :) 
-        public virtual Movie Movies { get; set; }      // FK (one) 
-                                                        // lägg till virtual vid LazyLoading
+        public virtual Movie Movies { get; set; }      // FK (one)                                                         
         public virtual Customer Customer { get; set; }     // FK (one)    
-                                                            //lägg till virtual vid LazyLoading
+                                                            
     }
     public class LeadActor
     {

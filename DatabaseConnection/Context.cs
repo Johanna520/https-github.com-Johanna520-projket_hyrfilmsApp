@@ -19,7 +19,7 @@ namespace DatabaseConnection
                 .LogTo(s => System.Diagnostics.Debug.WriteLine(s))
                 .UseLazyLoadingProxies()
                 .UseSqlServer(
-                @"server=.;" +
+                @"server=.\SQLExpress;" +
                 @"database=RentalMovieDatabase;" +
                 @"trusted_connection=true;" +
                 @"MultipleActiveResultSets=True"
