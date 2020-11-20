@@ -19,17 +19,21 @@ namespace DatabaseConnection
                 ctx.RemoveRange(ctx.Genres);
                 ctx.RemoveRange(ctx.LeadActors);
 
-                ctx.AddRange(new List<Customer> 
-                {
+                var Customers = new List<Customer>
+            
+                 {
                     new Customer { Email = "kalleabdul@hotmail.com",        FirstName = "Kalle",        LastName = "Abdul",         Birthday = "1988-04-01"},
                     new Customer { Email = "kevab@gmail.com",               FirstName = "Kevin",        LastName = "Aban",          Birthday = "1991-12-29"},
                     new Customer { Email = "christine.lofberg@telia.com",   FirstName = "Christine",    LastName = "Löfberg",       Birthday = "1960-05-14"},
                     new Customer { Email = "emelie.s.smith@gmail.com",      FirstName = "Emelie",       LastName = "Smith",         Birthday = "1997-01-23"},
                     new Customer { Email = "jocke_starfighter@yahoo.com",   FirstName = "Joakim",       LastName = "Stjernfeldt",   Birthday = "1977-08-22"}
 
-                });
+                };
+                ctx.AddRange(Customers);
 
-                ctx.AddRange(new List<Movie>
+
+
+                var Movies = new List<Movie>
                 {
                     new Movie { Title = "The Dark Knight",                                  Year = 2008, ImbdRating = 9.0},
                     new Movie { Title = "The Lord of the Rings: The Return of the King",    Year = 2003, ImbdRating = 8.9},
@@ -58,19 +62,21 @@ namespace DatabaseConnection
                     new Movie { Title = "Flight Club",                                      Year = 1999, ImbdRating = 8.8},
                     new Movie { Title = "Saving Private Ryan",                              Year = 1998, ImbdRating = 8.6},
                     new Movie { Title = "Goodfellas",                                       Year = 1990, ImbdRating = 8.7}
-                });
+                };
+                ctx.AddRange(Movies);
 
 
-                ctx.AddRange(new List<Rental>
+                var Rentals = new List<Rental>
                 {
-                    new Rental { RentalDate = "2020-10-19"},
-                    new Rental { RentalDate = "2020-10-31"},
-                    new Rental { RentalDate = "2020-10-31"},
-                    new Rental { RentalDate = "2020-11-01"},
-                    new Rental { RentalDate = "2020-11-10"}
-                }) ;
-
-                ctx.AddRange(new List<Genre> 
+                    new Rental {RentalDate = "2020-10-19", Customer = Customers[0], Movie = Movies[10]},
+                    new Rental {RentalDate = "2020-10-31", Customer = Customers[1], Movie = Movies[7]},
+                    new Rental {RentalDate = "2020-10-31", Customer = Customers[2], Movie = Movies[2]},
+                    new Rental {RentalDate = "2020-11-01", Customer = Customers[3], Movie = Movies[15]},
+                    new Rental {RentalDate = "2020-11-10", Customer = Customers[4], Movie = Movies[20]}
+                };
+                ctx.AddRange(Rentals);
+                
+                var Genres = new List<Genre> 
                 { 
                     new Genre { GenreName = "Crime" },
                     new Genre { GenreName = "Action" },
@@ -89,11 +95,13 @@ namespace DatabaseConnection
                     new Genre { GenreName = "Music" },
                     new Genre { GenreName = "Musical" },
                     new Genre { GenreName = "War" }
-                });
+                };
+                ctx.AddRange(Genres);
 
+               
 
+                var LeadActors = new List<LeadActor> 
 
-                ctx.AddRange(new List<LeadActor> 
                 {
                     new LeadActor {FirstName ="Christian",      LastName ="Bale"},              //The Dark Knight
                     new LeadActor {FirstName ="Heath",          LastName ="Ledger"},
@@ -139,11 +147,12 @@ namespace DatabaseConnection
                     new LeadActor {FirstName ="Matt",           LastName ="Damon"},
                     new LeadActor {FirstName ="Robert",         LastName ="De Niro"},           //Goodfellas
                     new LeadActor {FirstName ="Ray",            LastName ="Liotta"}
-                }); 
+                };
+                ctx.AddRange(LeadActors);
 
                 ctx.SaveChanges();
             }
-        
+  
         }
     }
 }

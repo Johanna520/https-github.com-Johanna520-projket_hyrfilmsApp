@@ -4,14 +4,16 @@ using DatabaseConnection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DatabaseConnection.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20201120092031_fixModel")]
+    partial class fixModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -107,10 +109,10 @@ namespace DatabaseConnection.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int?>("CustomerId")
+                    b.Property<int?>("CustomersCustomerId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("MovieId")
+                    b.Property<int?>("MoviesMovieId")
                         .HasColumnType("int");
 
                     b.Property<string>("RentalDate")
@@ -118,9 +120,9 @@ namespace DatabaseConnection.Migrations
 
                     b.HasKey("RentalId");
 
-                    b.HasIndex("CustomerId");
+                    b.HasIndex("CustomersCustomerId");
 
-                    b.HasIndex("MovieId");
+                    b.HasIndex("MoviesMovieId");
 
                     b.ToTable("Rentals");
                 });
@@ -157,17 +159,17 @@ namespace DatabaseConnection.Migrations
 
             modelBuilder.Entity("DatabaseConnection.Rental", b =>
                 {
-                    b.HasOne("DatabaseConnection.Customer", "Customer")
+                    b.HasOne("DatabaseConnection.Customer", "Customers")
                         .WithMany("Rentals")
-                        .HasForeignKey("CustomerId");
+                        .HasForeignKey("CustomersCustomerId");
 
-                    b.HasOne("DatabaseConnection.Movie", "Movie")
+                    b.HasOne("DatabaseConnection.Movie", "Movies")
                         .WithMany()
-                        .HasForeignKey("MovieId");
+                        .HasForeignKey("MoviesMovieId");
 
-                    b.Navigation("Customer");
+                    b.Navigation("Customers");
 
-                    b.Navigation("Movie");
+                    b.Navigation("Movies");
                 });
 
             modelBuilder.Entity("GenreMovie", b =>
