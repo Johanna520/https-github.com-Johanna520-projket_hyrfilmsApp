@@ -31,7 +31,7 @@ namespace DatabaseConnection
 
                 ctx.AddRange(new List<Movie>
                 {
-                    new Movie { Title = "The Dark Knight",                                  Year = 2008, ImbdRating = 9.0},
+                    new Movie { Title = "The Dark Knight",                                  Year = 2008, ImbdRating = 9.0}, 
                     new Movie { Title = "The Lord of the Rings: The Return of the King",    Year = 2003, ImbdRating = 8.9},
                     new Movie { Title = "Inception",                                        Year = 2010, ImbdRating = 8.8},
                     new Movie { Title = "The Matrix",                                       Year = 2008, ImbdRating = 8.7},
@@ -46,7 +46,7 @@ namespace DatabaseConnection
                     new Movie { Title = "Joker",                                            Year = 2019, ImbdRating = 8.5},
                     new Movie { Title = "Shutter Island",                                   Year = 2010, ImbdRating = 8.2},
                     new Movie { Title = "Gone Girl",                                        Year = 2014, ImbdRating = 8.1},
-                    new Movie { Title = "Forest Gump",                                      Year = 1994, ImbdRating = 8.8},
+                    new Movie { Title = "Forrest Gump",                                     Year = 1994, ImbdRating = 8.8},
                     new Movie { Title = "La La Land",                                       Year = 2016, ImbdRating = 8.0},
                     new Movie { Title = "Casablanca",                                       Year = 1942, ImbdRating = 8.5},
                     new Movie { Title = "Slumdog Millionare",                               Year = 2008, ImbdRating = 8.0},
@@ -55,11 +55,10 @@ namespace DatabaseConnection
                     new Movie { Title = "Schindler's List",                                 Year = 1993, ImbdRating = 8.9},
                     new Movie { Title = "Pulp Fiction",                                     Year = 1994, ImbdRating = 8.9},
                     new Movie { Title = "The Good, the Bad and the Ugly",                   Year = 1966, ImbdRating = 8.8},
-                    new Movie { Title = "Flight Club",                                      Year = 1999, ImbdRating = 8.8},
+                    new Movie { Title = "Fight Club",                                       Year = 1999, ImbdRating = 8.8},
                     new Movie { Title = "Saving Private Ryan",                              Year = 1998, ImbdRating = 8.6},
                     new Movie { Title = "Goodfellas",                                       Year = 1990, ImbdRating = 8.7}
                 });
-
 
                 ctx.AddRange(new List<Rental>
                 {
@@ -147,3 +146,33 @@ namespace DatabaseConnection
         }
     }
 }
+
+/*
+                 * The Dark Knight: Action, Crime, Drama, Thriller
+                 * The Lord of the Rings: The Return of the King: Action, Adventure, Drama, Fantasy
+                 * Inception: Action, Adventure, Sci-Fi, Thriller
+                 * The Matrix: Action, Sci-Fi
+                 * Star Wars: Episode IV - A new Hope: Action, Adventure, Fantasy, Sci-Fi
+                 * The Lion King: Animation, Adventure, Drama, Family, Musical
+                 * WALL-E: Animation, Adventure, Family, Sci-Fi
+                 * Toy Story: Animatiom, Adventure, Comedy, Family, Fantasy
+                 * Up: Animation, Adventure, Comedy, Family
+                 * Finding Nemo: Animation, Adventure, Comedy, Family
+                 * Se7en: Crime, Drama, Mystery, Thriller
+                 * The silence of the lambs: Crime, Drama, Thriller
+                 * Joker: Crime, Drama, Thriller
+                 * Shutter Island: Mystery, Thriller
+                 * Gone Girl: Drama, Mystery, Thriller
+                 * Forest Gump: Drama, Romance
+                 * La la Land: Comedy, Drama, Music, Musical, Romance
+                 * Casablanca: Drama, Romance, War
+                 * Slumdog Millionare: Drama, Romance
+                 * La vita è bella: Comedy, Drama, Romance, War
+                 * The Shawshank Redemption: Drama
+                 * Schnindler's list: Biography, Drama, History
+                 * Pulp Fiction: Crime, Drama
+                 * The Good, the Bad and the Ugly: Western
+                 * Fight Club: Drama
+                 * Saving Private Ryan: Drama, War
+                 * Goodfellas: Biography, Crime, Drama
+                 */
