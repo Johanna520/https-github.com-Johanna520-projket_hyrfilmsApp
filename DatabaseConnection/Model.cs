@@ -38,7 +38,7 @@ namespace DatabaseConnection
                                                     //Kolla med Alexander F isåfall :) 
         public virtual Movie Movie { get; set; }      // FK (one)                                                         
         public virtual Customer Customer { get; set; }     // FK (one)    
-                                                            
+                                                             
     }
     public class LeadActor
     {

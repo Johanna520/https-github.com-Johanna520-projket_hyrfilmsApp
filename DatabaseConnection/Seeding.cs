@@ -19,7 +19,7 @@ namespace DatabaseConnection
                 ctx.RemoveRange(ctx.Genres);
                 ctx.RemoveRange(ctx.LeadActors);
 
-                var Customers = new List<Customer>
+                List<Customer> Customers = new List<Customer>
             
                  {
                     new Customer { Email = "kalleabdul@hotmail.com",        FirstName = "Kalle",        LastName = "Abdul",         Birthday = "1988-04-01"},
@@ -31,8 +31,108 @@ namespace DatabaseConnection
                 };
                 ctx.AddRange(Customers);
 
-                var Genres = new List<Genre>
+                List<LeadActor> LeadActors = new List<LeadActor>
+                { 
+                    new LeadActor {FirstName ="Christian",      LastName ="Bale"},              //The Dark Knight
+                    new LeadActor {FirstName ="Heath",          LastName ="Ledger"},            //
+                    new LeadActor {FirstName ="Elijah",         LastName ="Wood"},              //The Lord of the Ring
+                    new LeadActor {FirstName ="Ian",            LastName ="McKellen"},          //
+                    new LeadActor {FirstName ="Leonardo ",      LastName ="DiCaprio"},          //5 //Inception
+                    new LeadActor {FirstName ="Joseph ",        LastName ="Gordon-Levitt"},     //6
+                    new LeadActor {FirstName ="Keanu",          LastName ="Reeves"},            //7 //Matrix
+                    new LeadActor {FirstName ="Laurence",       LastName ="Fishburne"},         //8
+                    new LeadActor {FirstName ="Harrison ",      LastName ="Ford"},              //9 Star Wars
+                    new LeadActor {FirstName ="Carrie ",        LastName ="Fisher"},            //10
+                    new LeadActor {FirstName ="Morgan",         LastName ="Freeman"},           //11 //se7en
+                    new LeadActor {FirstName ="Brad",           LastName ="Pitt"},              //12
+                    new LeadActor {FirstName ="Jodie",          LastName ="Foster"},            //13 //The Silence of the Lambs
+                    new LeadActor {FirstName ="Anthony",        LastName ="Hopkins"},           //14
+                    new LeadActor {FirstName ="Joaquin",        LastName ="Phoenix"},           //15 //Joker
+                    new LeadActor {FirstName ="Robert",         LastName ="De Niro"},           //16
+                    new LeadActor {FirstName ="Emily",          LastName ="Mortimer"},          //5 + 17//Shutter Island 
+                    new LeadActor {FirstName ="Ben",            LastName ="Affleck"},           //18 //Gone Girl
+                    new LeadActor {FirstName ="Rosamund ",      LastName ="Pike"},              //19
+                    new LeadActor {FirstName ="Tom",            LastName ="Hanks"},             //20//Forest Gump
+                    new LeadActor {FirstName ="Robin",          LastName ="Wright"},            //21
+                    new LeadActor {FirstName ="Ryan ",          LastName ="Gosling"},           //22//La La Land
+                    new LeadActor {FirstName ="Emma",           LastName ="Stone"},             //23
+                    new LeadActor {FirstName ="Humphrey",       LastName ="Bogart"},            //24//Casablanca
+                    new LeadActor {FirstName ="Ingrid",         LastName ="Bergman"},           //25
+                    new LeadActor {FirstName ="Dev",            LastName ="Patel"},             //26//Slumdog Millionare
+                    new LeadActor {FirstName ="Freida",         LastName ="Pinto"},             //27
+                    new LeadActor {FirstName ="Roberto",        LastName ="Benigni"},           //28//La vita è bella
+                    new LeadActor {FirstName ="Nicoletta",      LastName ="Braschi"},           //29
+                    new LeadActor {FirstName ="Tim",            LastName ="Robbins"},           //30+11//The Shawshank Redemption 
+                    new LeadActor {FirstName ="Liam",           LastName ="Nelson"},            //31//Schindler's List      
+                    new LeadActor {FirstName ="Ralph",          LastName ="Finess"},            //32
+                    new LeadActor {FirstName ="John",           LastName ="Travolta"},          //33//Pulp Fiction   
+                    new LeadActor {FirstName ="Uma",            LastName ="Thurman"},           //34
+                    new LeadActor {FirstName ="Clint",          LastName ="Eastwood"},          //35//The Good, the Bad and the Ugly  
+                    new LeadActor {FirstName ="Eli",            LastName ="Wallach"},           //36
+                    new LeadActor {FirstName ="Edward",         LastName ="Norton"},            //12+37 //Flight Club  
+                    new LeadActor {FirstName ="Matt",           LastName ="Damon"},             //20+38 //Saving Private Ryan
+                    new LeadActor {FirstName ="Ray",            LastName ="Liotta"},            //16+39 //Goodfellas
+                    new LeadActor {FirstName = "Ellen",         LastName = "DeGeneres"},       //40, Finding Nemo
+                    new LeadActor {FirstName = "Albert",        LastName ="Brooks" },            //41
+                    new LeadActor {FirstName = "Matthew",       LastName ="Broderick"},        //42 Lion King
+                    new LeadActor {FirstName = "Jeremy",        LastName ="Irons" },             //43
+                    new LeadActor {FirstName = "Ben",           LastName ="Burtt" },                //44 Wall-E
+                    new LeadActor {FirstName = "Elissa",        LastName ="Knight" },              //45
+                    new LeadActor {FirstName = "Tim",           LastName ="Allen" },           //46, ToyStory
+                    new LeadActor {FirstName = "Edward",       LastName ="Asner" },        //47Up
+                    new LeadActor {FirstName = "Jordan",       LastName ="Nagai" }     //48
+
+                };
+                ctx.AddRange(LeadActors);
+
+                List<Movie> Movies = new List<Movie>
                 {
+                    new Movie { Title = "The Dark Knight",                                 LeadActors = new List<LeadActor>{LeadActors[0],  LeadActors[1]},     Year = 2008, ImbdRating = 9.0}, 
+                    new Movie { Title = "The Lord of the Rings: The Return of the King",   LeadActors = new List<LeadActor>{LeadActors[3],  LeadActors[4]},     Year = 2003, ImbdRating = 8.9},
+                    new Movie { Title = "Inception",                                       LeadActors = new List<LeadActor>{LeadActors[5],  LeadActors[6]},     Year = 2010, ImbdRating = 8.8},
+                    new Movie { Title = "The Matrix",                                      LeadActors = new List<LeadActor>{LeadActors[7],  LeadActors[8]},     Year = 2008, ImbdRating = 8.7},
+                    new Movie { Title = "Star Wars: Episode IV - A new Hope",              LeadActors = new List<LeadActor>{LeadActors[9],  LeadActors[10]},    Year = 1977, ImbdRating = 8.6},
+                    new Movie { Title = "The Lion King",                                   LeadActors = new List<LeadActor>{LeadActors[42], LeadActors[43]},   Year = 1994, ImbdRating = 8.5},
+                    new Movie { Title = "WALL-E",                                          LeadActors = new List<LeadActor>{LeadActors[44], LeadActors[45]},   Year = 2008, ImbdRating = 8.4},
+                    new Movie { Title = "Toy Story",                                       LeadActors = new List<LeadActor>{LeadActors[20], LeadActors[46]},   Year = 2008, ImbdRating = 9.0},
+                    new Movie { Title = "Up",                                              LeadActors = new List<LeadActor>{LeadActors[47], LeadActors[48]},   Year = 2009, ImbdRating = 8.2},
+                    new Movie { Title = "Finding Nemo",                                    LeadActors = new List<LeadActor>{LeadActors[40], LeadActors[41]},   Year = 2003, ImbdRating = 8.1},
+                    new Movie { Title = "Se7en",                                           LeadActors = new List<LeadActor>{LeadActors[11], LeadActors[12]},   Year = 1995, ImbdRating = 8.6},
+                    new Movie { Title = "The Silence of the Lambs",                        LeadActors = new List<LeadActor>{LeadActors[13], LeadActors[14]},   Year = 1991, ImbdRating = 8.6},
+                    new Movie { Title = "Joker",                                           LeadActors = new List<LeadActor>{LeadActors[15], LeadActors[16]},   Year = 2019, ImbdRating = 8.5},
+                    new Movie { Title = "Shutter Island",                                  LeadActors = new List<LeadActor>{LeadActors[5],  LeadActors[17]},    Year = 2010, ImbdRating = 8.2},
+                    new Movie { Title = "Gone Girl",                                       LeadActors = new List<LeadActor>{LeadActors[18], LeadActors[19]},   Year = 2014, ImbdRating = 8.1},
+                    new Movie { Title = "Forrest Gump",                                    LeadActors = new List<LeadActor>{LeadActors[20], LeadActors[21]},   Year = 1994, ImbdRating = 8.8},
+                    new Movie { Title = "La La Land",                                      LeadActors = new List<LeadActor>{LeadActors[22], LeadActors[23]},   Year = 2016, ImbdRating = 8.0},
+                    new Movie { Title = "Casablanca",                                      LeadActors = new List<LeadActor>{LeadActors[24], LeadActors[25]},   Year = 1942, ImbdRating = 8.5},
+                    new Movie { Title = "Slumdog Millionare",                              LeadActors = new List<LeadActor>{LeadActors[26], LeadActors[27]},   Year = 2008, ImbdRating = 8.0},
+                    new Movie { Title = "La vita è bella",                                 LeadActors = new List<LeadActor>{LeadActors[28], LeadActors[29]},   Year = 1997, ImbdRating = 8.6},
+                    new Movie { Title = "The Shawshank Redemption",                        LeadActors = new List<LeadActor>{LeadActors[30], LeadActors[11]},   Year = 1994, ImbdRating = 9.3},
+                    new Movie { Title = "Schindler's List",                                LeadActors = new List<LeadActor>{LeadActors[31], LeadActors[32]},   Year = 1993, ImbdRating = 8.9},
+                    new Movie { Title = "Pulp Fiction",                                    LeadActors = new List<LeadActor>{LeadActors[33], LeadActors[34]},   Year = 1994, ImbdRating = 8.9},
+                    new Movie { Title = "The Good, the Bad and the Ugly",                  LeadActors = new List<LeadActor>{LeadActors[35], LeadActors[36]},   Year = 1966, ImbdRating = 8.8},
+                    new Movie { Title = "Fight Club",                                      LeadActors = new List<LeadActor>{LeadActors[12], LeadActors[37]},   Year = 1999, ImbdRating = 8.8},
+                    new Movie { Title = "Saving Private Ryan",                             LeadActors = new List<LeadActor>{LeadActors[20], LeadActors[38]},   Year = 1998, ImbdRating = 8.6},
+                    new Movie { Title = "Goodfellas",                                      LeadActors = new List<LeadActor>{LeadActors[16], LeadActors[39]},   Year = 1990, ImbdRating = 8.7}
+                
+                };
+                ctx.AddRange(Movies);
+
+
+
+                List<Rental> Rentals = new List<Rental>
+                { 
+                    new Rental {RentalDate = "2020-10-05", Customer = Customers[0], Movie = Movies[10]},
+                    new Rental {RentalDate = "2020-10-31", Customer = Customers[1], Movie = Movies[7]},
+                    new Rental {RentalDate = "2020-10-31", Customer = Customers[2], Movie = Movies[2]},
+                    new Rental {RentalDate = "2020-11-01", Customer = Customers[3], Movie = Movies[15]},
+                    new Rental {RentalDate = "2020-11-10", Customer = Customers[4], Movie = Movies[20]}
+                };
+                ctx.AddRange(Rentals);    
+               
+
+                List<Genre> Genres = new List<Genre> 
+                { 
                     new Genre { GenreName = "Crime" },
                     new Genre { GenreName = "Action" },
                     new Genre { GenreName = "Biography" },
@@ -53,98 +153,9 @@ namespace DatabaseConnection
                 };
                 ctx.AddRange(Genres);
 
-                var Movies = new List<Movie>
-                {
-                    new Movie { Title = "The Dark Knight",                                  Year = 2008, Genres = new List<Genre>{Genres[0], Genres[1], Genres[3], Genres[11]}, ImbdRating = 9.0, ImageURL = "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg" }, 
-                    new Movie { Title = "The Lord of the Rings: The Return of the King",    Year = 2003, Genres = new List<Genre>{Genres[1], Genres[6], Genres[3], Genres[5]}, ImbdRating = 8.9, ImageURL = "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Inception",                                        Year = 2010, Genres = new List<Genre>{Genres[1], Genres[6], Genres[7], Genres[11]}, ImbdRating = 8.8, ImageURL = "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_UX182_CR0,0,182,268_AL_.jpg"},
-                    new Movie { Title = "The Matrix",                                       Year = 2008, Genres = new List<Genre>{Genres[1], Genres[7]}, ImbdRating = 8.7, ImageURL = "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Star Wars: Episode IV - A new Hope",               Year = 1977, Genres = new List<Genre>{Genres[1], Genres[6], Genres[5], Genres[7]}, ImbdRating = 8.6, ImageURL = "https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "The Lion King",                                    Year = 1994, Genres = new List<Genre>{Genres[9], Genres[6], Genres[3], Genres[8], Genres[15]}, ImbdRating = 8.5, ImageURL = "https://m.media-amazon.com/images/M/MV5BNzVmNzQ2ZmYtMmUzNy00MzhjLTg4ODUtMTQ0MjMzYTdkMDg5XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UY268_CR5,0,182,268_AL_.jpg" },
-                    new Movie { Title = "WALL-E",                                           Year = 2008, Genres = new List<Genre>{Genres[9], Genres[6], Genres[8], Genres[7]}, ImbdRating = 8.4, ImageURL = "https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Toy Story",                                        Year = 1995, Genres = new List<Genre>{Genres[9], Genres[6], Genres[10], Genres[8], Genres[5]}, ImbdRating = 9.0, ImageURL = "https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Up",                                               Year = 2009, Genres = new List<Genre>{Genres[9], Genres[6], Genres[10], Genres[8]}, ImbdRating = 8.2, ImageURL = "https://m.media-amazon.com/images/M/MV5BMTk3NDE2NzI4NF5BMl5BanBnXkFtZTgwNzE1MzEyMTE@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Finding Nemo",                                     Year = 2003, Genres = new List<Genre>{Genres[9], Genres[6], Genres[10], Genres[8]}, ImbdRating = 8.1, ImageURL = "https://m.media-amazon.com/images/M/MV5BZTAzNWZlNmUtZDEzYi00ZjA5LWIwYjEtZGM1NWE1MjE4YWRhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Se7en",                                            Year = 1995, Genres = new List<Genre>{Genres[0], Genres[3], Genres[12], Genres[11]}, ImbdRating = 8.6, ImageURL = "https://m.media-amazon.com/images/M/MV5BOTUwODM5MTctZjczMi00OTk4LTg3NWUtNmVhMTAzNTNjYjcyXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "The Silence of the Lambs",                         Year = 1991, Genres = new List<Genre>{Genres[0], Genres[3], Genres[11]}, ImbdRating = 8.6, ImageURL = "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Joker",                                            Year = 2019, Genres = new List<Genre>{Genres[0], Genres[3], Genres[11]}, ImbdRating = 8.5, ImageURL = "https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Shutter Island",                                   Year = 2010, Genres = new List<Genre>{Genres[12], Genres[11]}, ImbdRating = 8.2, ImageURL = "https://m.media-amazon.com/images/M/MV5BYzhiNDkyNzktNTZmYS00ZTBkLTk2MDAtM2U0YjU1MzgxZjgzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Gone Girl",                                        Year = 2014, Genres = new List<Genre>{Genres[3], Genres[12], Genres[11]}, ImbdRating = 8.1, ImageURL = "https://m.media-amazon.com/images/M/MV5BMTk0MDQ3MzAzOV5BMl5BanBnXkFtZTgwNzU1NzE3MjE@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Forrest Gump",                                     Year = 1994, Genres = new List<Genre>{Genres[3], Genres[13]}, ImbdRating = 8.8, ImageURL = "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY268_CR1,0,182,268_AL_.jpg" },
-                    new Movie { Title = "La La Land",                                       Year = 2016, Genres = new List<Genre>{Genres[10], Genres[3], Genres[14], Genres[15], Genres[13]}, ImbdRating = 8.0, ImageURL = "https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Casablanca",                                       Year = 1942, Genres = new List<Genre>{Genres[3], Genres[13], Genres[16]}, ImbdRating = 8.5, ImageURL = "https://m.media-amazon.com/images/M/MV5BY2IzZGY2YmEtYzljNS00NTM5LTgwMzUtMzM1NjQ4NGI0OTk0XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Slumdog Millionare",                               Year = 2008, Genres = new List<Genre>{Genres[3], Genres[13]}, ImbdRating = 8.0, ImageURL = "https://m.media-amazon.com/images/M/MV5BZmNjZWI3NzktYWI1Mi00OTAyLWJkNTYtMzUwYTFlZDA0Y2UwXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "La vita è bella",                                  Year = 1997, Genres = new List<Genre>{Genres[10], Genres[3], Genres[13], Genres[16]}, ImbdRating = 8.6, ImageURL = "https://m.media-amazon.com/images/M/MV5BYmJmM2Q4NmMtYThmNC00ZjRlLWEyZmItZTIwOTBlZDQ3NTQ1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "The Shawshank Redemption",                         Year = 1994, Genres = new List<Genre>{Genres[3]}, ImbdRating = 9.3, ImageURL = "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Schindler's List",                                 Year = 1993, Genres = new List<Genre>{Genres[2], Genres[3]}, ImbdRating = 8.9, ImageURL = "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Pulp Fiction",                                     Year = 1994, Genres = new List<Genre>{Genres[0], Genres[3]}, ImbdRating = 8.9, ImageURL = "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY268_CR1,0,182,268_AL_.jpg" },
-                    new Movie { Title = "The Good, the Bad and the Ugly",                   Year = 1966, Genres = new List<Genre>{Genres[4]}, ImbdRating = 8.8, ImageURL = "https://m.media-amazon.com/images/M/MV5BOTQ5NDI3MTI4MF5BMl5BanBnXkFtZTgwNDQ4ODE5MDE@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Fight Club",                                       Year = 1999, Genres = new List<Genre>{Genres[3]}, ImbdRating = 8.8, ImageURL = "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Saving Private Ryan",                              Year = 1998, Genres = new List<Genre>{Genres[3], Genres[16] }, ImbdRating = 8.6, ImageURL = "https://m.media-amazon.com/images/M/MV5BZjhkMDM4MWItZTVjOC00ZDRhLThmYTAtM2I5NzBmNmNlMzI1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_UY268_CR0,0,182,268_AL_.jpg" },
-                    new Movie { Title = "Goodfellas",                                       Year = 1990, Genres = new List<Genre>{Genres[2], Genres[0], Genres[3]}, ImbdRating = 8.7, ImageURL = "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL_.jpg" }
-                };
-                ctx.AddRange(Movies);
+               
 
-
-                var Rentals = new List<Rental>
-                { 
-                    new Rental {RentalDate = "2020-10-05", Customer = Customers[0], Movie = Movies[10]},
-                    new Rental {RentalDate = "2020-10-31", Customer = Customers[1], Movie = Movies[7]},
-                    new Rental {RentalDate = "2020-10-31", Customer = Customers[2], Movie = Movies[2]},
-                    new Rental {RentalDate = "2020-11-01", Customer = Customers[3], Movie = Movies[15]},
-                    new Rental {RentalDate = "2020-11-10", Customer = Customers[4], Movie = Movies[20]}
-                };
-                ctx.AddRange(Rentals);    
-
-                var LeadActors = new List<LeadActor> 
-
-                {
-                    new LeadActor {FirstName ="Christian",      LastName ="Bale"},              //The Dark Knight
-                    new LeadActor {FirstName ="Heath",          LastName ="Ledger"},
-                    new LeadActor {FirstName ="Elijah",         LastName ="Wood"},              //The Lord of the Ring
-                    new LeadActor {FirstName ="Ian",            LastName ="McKellen"},
-                    new LeadActor {FirstName ="Leonardo ",      LastName ="DiCaprio"},          //Inception
-                    new LeadActor {FirstName ="Joseph ",        LastName ="Gordon-Levitt"},
-                    new LeadActor {FirstName ="Keanu",          LastName ="Reeves"},            //Matrix
-                    new LeadActor {FirstName ="Laurence",       LastName ="Fishburne"},
-                    new LeadActor {FirstName ="Harrison ",      LastName ="Ford"},              //Star Wars
-                    new LeadActor {FirstName ="Carrie ",        LastName ="Fisher"},
-                    new LeadActor {FirstName ="Morgan",         LastName ="Freeman"},           //se7en
-                    new LeadActor {FirstName ="Brad",           LastName ="Pitt"},
-                    new LeadActor {FirstName ="Jodie",          LastName ="Foster"},            //The Silence of the Lambs
-                    new LeadActor {FirstName ="Anthony",        LastName ="Hopkins"},
-                    new LeadActor {FirstName ="Joaquin",        LastName ="Phoenix"},           //Joker
-                    new LeadActor {FirstName ="Robert",         LastName ="De Niro"},
-                    new LeadActor {FirstName ="Leonardo",       LastName ="DiCaprio"},          //Shutter Island !!LEO IGEN??
-                    new LeadActor {FirstName ="Emily",          LastName ="Mortimer"},
-                    new LeadActor {FirstName ="Ben",            LastName ="Affleck"},           //Gone Girl
-                    new LeadActor {FirstName ="Rosamund ",      LastName ="Pike"},
-                    new LeadActor {FirstName ="Tom",            LastName ="Hanks"},             //Forest Gump
-                    new LeadActor {FirstName ="Robin",          LastName ="Wright"},
-                    new LeadActor {FirstName ="Ryan ",          LastName ="Gosling"},           //La La Land
-                    new LeadActor {FirstName ="Emma",           LastName ="Stone"},
-                    new LeadActor {FirstName ="Humphrey",       LastName ="Bogart"},            //Casablanca
-                    new LeadActor {FirstName ="Ingrid",         LastName ="Bergman"},
-                    new LeadActor {FirstName ="Dev",            LastName ="Patel"},             //Slumdog Millionare
-                    new LeadActor {FirstName ="Freida",         LastName ="Pinto"},
-                    new LeadActor {FirstName ="Roberto",        LastName ="Benigni"},           //La vita è bella
-                    new LeadActor {FirstName ="Nicoletta",      LastName ="Braschi"},
-                    new LeadActor {FirstName ="Tim",            LastName ="Robbins"},           //The Shawshank Redemption 
-                    new LeadActor {FirstName ="Morgan",         LastName ="Freeman"},
-                    new LeadActor {FirstName ="Liam",           LastName ="Neeson"},            //Schindler's List      
-                    new LeadActor {FirstName ="Ralph",          LastName ="Finess"},
-                    new LeadActor {FirstName ="John",           LastName ="Travolta"},          //Pulp Fiction   
-                    new LeadActor {FirstName ="Uma",            LastName ="Thurman"},
-                    new LeadActor {FirstName ="Clint",          LastName ="Eastwood"},          //The Good, the Bad and the Ugly  
-                    new LeadActor {FirstName ="Eli",            LastName ="Wallach"},
-                    new LeadActor {FirstName ="Brad",           LastName ="Pitt"},              //Flight Club       
-                    new LeadActor {FirstName ="Edward",         LastName ="Norton"},
-                    new LeadActor {FirstName ="Tom",            LastName ="Hanks"},             //Saving Private Ryan
-                    new LeadActor {FirstName ="Matt",           LastName ="Damon"},
-                    new LeadActor {FirstName ="Robert",         LastName ="De Niro"},           //Goodfellas
-                    new LeadActor {FirstName ="Ray",            LastName ="Liotta"}
-                };
-                ctx.AddRange(LeadActors);
+                
 
                 ctx.SaveChanges();
             }
