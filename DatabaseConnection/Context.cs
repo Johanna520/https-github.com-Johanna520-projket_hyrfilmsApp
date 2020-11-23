@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 /*TODO V 48
- * måndag: lägga till bilder i Movies, få bort upprepning av data i tabellerna. 
+ * måndag: lägga till bilder i Movies --, få bort upprepning av data i tabellerna ??? Kolla med björn. 
  * tisdag: föreläsning
  * onsdag:GenreMovie, LeadActorMovie - tabellerna. 
  * torsdag: nörja med wpf
