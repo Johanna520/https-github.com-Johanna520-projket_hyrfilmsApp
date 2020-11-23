@@ -35,7 +35,7 @@ namespace DatabaseConnection
 
                 var Movies = new List<Movie>
                 {
-                    new Movie { Title = "The Dark Knight",                                  Year = 2008, ImbdRating = 9.0},
+                    new Movie { Title = "The Dark Knight",                                  Year = 2008, ImbdRating = 9.0}, 
                     new Movie { Title = "The Lord of the Rings: The Return of the King",    Year = 2003, ImbdRating = 8.9},
                     new Movie { Title = "Inception",                                        Year = 2010, ImbdRating = 8.8},
                     new Movie { Title = "The Matrix",                                       Year = 2008, ImbdRating = 8.7},
@@ -50,7 +50,7 @@ namespace DatabaseConnection
                     new Movie { Title = "Joker",                                            Year = 2019, ImbdRating = 8.5},
                     new Movie { Title = "Shutter Island",                                   Year = 2010, ImbdRating = 8.2},
                     new Movie { Title = "Gone Girl",                                        Year = 2014, ImbdRating = 8.1},
-                    new Movie { Title = "Forest Gump",                                      Year = 1994, ImbdRating = 8.8},
+                    new Movie { Title = "Forrest Gump",                                     Year = 1994, ImbdRating = 8.8},
                     new Movie { Title = "La La Land",                                       Year = 2016, ImbdRating = 8.0},
                     new Movie { Title = "Casablanca",                                       Year = 1942, ImbdRating = 8.5},
                     new Movie { Title = "Slumdog Millionare",                               Year = 2008, ImbdRating = 8.0},
@@ -59,7 +59,7 @@ namespace DatabaseConnection
                     new Movie { Title = "Schindler's List",                                 Year = 1993, ImbdRating = 8.9},
                     new Movie { Title = "Pulp Fiction",                                     Year = 1994, ImbdRating = 8.9},
                     new Movie { Title = "The Good, the Bad and the Ugly",                   Year = 1966, ImbdRating = 8.8},
-                    new Movie { Title = "Flight Club",                                      Year = 1999, ImbdRating = 8.8},
+                    new Movie { Title = "Fight Club",                                       Year = 1999, ImbdRating = 8.8},
                     new Movie { Title = "Saving Private Ryan",                              Year = 1998, ImbdRating = 8.6},
                     new Movie { Title = "Goodfellas",                                       Year = 1990, ImbdRating = 8.7}
                 };
@@ -67,6 +67,7 @@ namespace DatabaseConnection
 
 
                 var Rentals = new List<Rental>
+                ctx.AddRange(new List<Rental>
                 {
                     new Rental {RentalDate = "2020-10-19", Customer = Customers[0], Movie = Movies[10]},
                     new Rental {RentalDate = "2020-10-31", Customer = Customers[1], Movie = Movies[7]},
