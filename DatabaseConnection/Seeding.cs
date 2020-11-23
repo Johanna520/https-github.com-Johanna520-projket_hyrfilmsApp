@@ -67,7 +67,7 @@ namespace DatabaseConnection
 
 
                 var Rentals = new List<Rental>
-                ctx.AddRange(new List<Rental>
+                
                 {
                     new Rental {RentalDate = "2020-10-19", Customer = Customers[0], Movie = Movies[10]},
                     new Rental {RentalDate = "2020-10-31", Customer = Customers[1], Movie = Movies[7]},
