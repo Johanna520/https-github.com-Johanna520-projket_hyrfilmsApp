@@ -5,8 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projektDatalagring"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Height="450" Width="800">
+  
+    <ScrollViewer>
+        <Grid Background="Black">
+            
+            <Grid Name="Menu_panel" Background="DarkGray" HorizontalAlignment="Left" Width="100">
+                <StackPanel>
+           
+                <Image Name="SearchButton"  Source="Menu-image/search.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Image Name="UserButton" Source="Menu-image/user.png"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Image Name="MovieButton" Source="Menu-image/movie.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Grid>
+            
+            <Grid Name ="Home_view">
+                <Grid.ColumnDefinitions>
+                    
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                         <ColumnDefinition />
+                        <ColumnDefinition />
+                         <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+            
+                        <Grid.RowDefinitions>
+                        </Grid.RowDefinitions>
 
-    </Grid>
+                </Grid>
+        </Grid>
+        
+    </ScrollViewer>
 </Window>

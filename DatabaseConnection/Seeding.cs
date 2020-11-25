@@ -103,8 +103,8 @@ namespace DatabaseConnection
                     new LeadActor {FirstName = "Ben",           LastName ="Burtt" },                //43 Wall-E
                     new LeadActor {FirstName = "Elissa",        LastName ="Knight" },              //44
                     new LeadActor {FirstName = "Tim",           LastName ="Allen" },           //45 19, ToyStory
-                    new LeadActor {FirstName = "Edward",       LastName ="Asner" },        //46Up
-                    new LeadActor {FirstName = "Jordan",       LastName ="Nagai" }     //47
+                    new LeadActor {FirstName = "Edward",        LastName ="Asner" },        //46Up
+                    new LeadActor {FirstName = "Jordan",        LastName ="Nagai" }     //47
 
                 };
                 ctx.AddRange(LeadActors);

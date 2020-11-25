@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Menu-image\movie.png" />
+    <None Remove="Menu-image\search.png" />
+    <None Remove="Menu-image\user.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -17,6 +23,16 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseConnection\DatabaseConnection.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Menu-image\movie.png" />
+    <Resource Include="Menu-image\search.png" />
+    <Resource Include="Menu-image\user.png" />
   </ItemGroup>
 
 </Project>

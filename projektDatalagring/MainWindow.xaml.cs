@@ -12,8 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DatabaseConnection;
 
-namespace projektDatalagring
+namespace Store
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -22,7 +23,12 @@ namespace projektDatalagring
     {
         public MainWindow()
         {
-            InitializeComponent();
+          // InitializeComponent();
+ 
+
+
+
+
         }
     }
 }

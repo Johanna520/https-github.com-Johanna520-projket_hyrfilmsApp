@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:projektDatalagring"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        
          
     </Application.Resources>
 </Application>
