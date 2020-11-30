@@ -103,8 +103,8 @@ namespace DatabaseConnection
                     new LeadActor {FirstName = "Ben",           LastName ="Burtt" },                //43 Wall-E
                     new LeadActor {FirstName = "Elissa",        LastName ="Knight" },              //44
                     new LeadActor {FirstName = "Tim",           LastName ="Allen" },           //45 19, ToyStory
-                    new LeadActor {FirstName = "Edward",       LastName ="Asner" },        //46Up
-                    new LeadActor {FirstName = "Jordan",       LastName ="Nagai" }     //47
+                    new LeadActor {FirstName = "Edward",        LastName ="Asner" },        //46Up
+                    new LeadActor {FirstName = "Jordan",        LastName ="Nagai" }     //47
 
                 };
                 ctx.AddRange(LeadActors);
@@ -146,11 +146,11 @@ namespace DatabaseConnection
 
                 List<Rental> Rentals = new List<Rental>
                 { 
-                    new Rental {RentalDate = DateTime.Parse("2020-10-05"), Customer = Customers[0], Movie = Movies[10]},
-                    new Rental {RentalDate = DateTime.Parse("2020-10-31"), Customer = Customers[1], Movie = Movies[7]},
-                    new Rental {RentalDate = DateTime.Parse("2020-10-31"), Customer = Customers[2], Movie = Movies[2]},
-                    new Rental {RentalDate = DateTime.Parse("2020-11-01"), Customer = Customers[3], Movie = Movies[15]},
-                    new Rental {RentalDate = DateTime.Parse("2020-11-10"), Customer = Customers[4], Movie = Movies[20]}
+                    new Rental {RentalDate = DateTime.Parse("2020-10-05 10:05:03"), Customer = Customers[0], Movie = Movies[10]},
+                    new Rental {RentalDate = DateTime.Parse("2020-10-31 17:28:21"), Customer = Customers[1], Movie = Movies[7]},
+                    new Rental {RentalDate = DateTime.Parse("2020-10-31 17:28:21"), Customer = Customers[2], Movie = Movies[2]},
+                    new Rental {RentalDate = DateTime.Parse("2020-11-01 15:48:52"), Customer = Customers[3], Movie = Movies[15]},
+                    new Rental {RentalDate = DateTime.Parse("2020-11-10 16:02:22"), Customer = Customers[4], Movie = Movies[20]}
                 };
                 ctx.AddRange(Rentals);  
                        
