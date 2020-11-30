@@ -34,7 +34,7 @@ namespace DatabaseConnection
     public class Rental
     {
         public int RentalId { get; set; }      // PK
-        public string RentalDate { get; set; }     //Obs... Här går även göra en datetime och därefter ev. göra en parse. 
+        public DateTime RentalDate { get; set; }     //Obs... Här går även göra en datetime och därefter ev. göra en parse. 
                                                     //Kolla med Alexander F isåfall :) 
         public virtual Movie Movie { get; set; }      // FK (one)                                                         
         public virtual Customer Customer { get; set; }     // FK (one)    
