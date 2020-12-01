@@ -1,27 +1,52 @@
-﻿<Window x:Class="Store.MainWindow"
+﻿<Window x:Class="FleraVyer.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Store"
+        xmlns:local="clr-namespace:FleraVyer"
+        xmlns:sub="clr-namespace:FleraVyer.SubViews"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-  
-    <ScrollViewer>                                        
-        <Grid Name ="MovieGrid" Background="Black">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
+    <Grid>
+        <!-- 
+            Ett grid för att dela in mitt fönster i en del som alla 
+            vyer delar och en del som roteras ut
+        -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
 
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                
-            </Grid.RowDefinitions>
-                              
-        </Grid>        
-    </ScrollViewer>
+        <!-- Titeln längst upp -->
+        <Label Grid.Column="1" Grid.Row="0" Name="Title" Content="Hem" FontSize="40" HorizontalContentAlignment="Center"></Label>
+
+        <!-- Knapparna till vänster -->
+        <StackPanel Grid.Column="0" Grid.Row="1" Margin="20">
+            <Button Height="100" Margin="0,0,0,10" Click="GoHem_Click">Hem</Button>
+            <Button Height="100" Margin="0,0,0,10" Click="GoMinSida_Click">MinSida</Button>
+            <Button Height="100" Margin="0,0,0,10" Click="GoFilmer_Click">Filmer</Button>
+        </StackPanel>
+
+        <!-- 
+            Massa UserControls, en för varje vy som jag vill växla mellan
+            Visibility är en jättebra parameter för att styra vad som ska
+            visas och inte, för man kan manuellt i designern slå på och av
+            för att testa att designen fungerar.
+        
+            'sub:' som jag använder här för att för att komma åt mina UserControls
+            är definierat såhär:
+                xmlns:sub="clr-namespace:FleraVyer.SubViews"
+            längre upp i denna filen. Det är liknande att skriva 
+            'using FleraVyer.SubViews;' i C# kan man säga.
+        -->
+        <Grid Grid.Column="1" Grid.Row="1">
+            <sub:Hem x:Name="Hem" Visibility="Hidden"></sub:Hem>
+            <sub:MinSida x:Name="MinSida" Visibility="Hidden"></sub:MinSida>
+            <sub:Filmer x:Name="Filmer" Visibility="Hidden"></sub:Filmer>
+        </Grid>
+    </Grid>
 </Window>
