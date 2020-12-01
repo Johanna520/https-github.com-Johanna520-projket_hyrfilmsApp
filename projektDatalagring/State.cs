@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using DatabaseConnection;
 
-namespace Store
+namespace FleraVyer.SubViews
 {  /* En statisk klass som kan hålla koll på data medans jag växlar programfönster.
      * Eftersom den ligger utanför fönsterklasserna så kan båda komma åt den närsomhelst.
      */
