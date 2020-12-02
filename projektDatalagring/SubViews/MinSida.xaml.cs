@@ -22,6 +22,7 @@ namespace FleraVyer.SubViews
         public MinSida()
         {
             InitializeComponent();
+            
         }
     }
 }
