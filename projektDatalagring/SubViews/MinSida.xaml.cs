@@ -22,6 +22,15 @@ namespace FleraVyer.SubViews
         public MinSida()
         {
             InitializeComponent();
+             
+
+
+
+           // MinSidaLabel.Content = "Personuppgifter"; 
+            MinSidaLabel.Content = "Namn: " + State.User.FirstName + State.User.LastName;
+           // * MinSidaLabel.Content = "E-post: " + State.User.Email;
+           // MinSidaLabel.Content = "Födelsedag: " + State.User.Birthday;
+                
             
         }
     }

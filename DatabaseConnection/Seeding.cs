@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
@@ -7,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DatabaseConnection
 {
-    class Seeding
+    public class Seeding
     {// rensa upp först för att inte bli dubletter? varför ändras idnr hela tiden? 
         static void Main()
         {

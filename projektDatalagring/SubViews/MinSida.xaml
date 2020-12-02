@@ -6,8 +6,8 @@
              xmlns:local="clr-namespace:FleraVyer.SubViews"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="680">
-    <Grid>
-        
+    <Grid Background="Black">
+        <Label Name="MinSidaLabel" Content="" Foreground="White" FontSize="32" HorizontalAlignment="Center" Margin ="0,150,0,0" VerticalAlignment="Top"></Label>
     </Grid>
 </UserControl>
 
