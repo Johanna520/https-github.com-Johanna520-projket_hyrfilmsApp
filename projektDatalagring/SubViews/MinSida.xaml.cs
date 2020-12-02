@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,13 +23,15 @@ namespace FleraVyer.SubViews
         public MinSida()
         {
             InitializeComponent();
-
-            // MinSidaLabel.Content = "Personuppgifter"; 
+            if (!DesignerProperties.GetIsInDesignMode(this))
+            {
             FirstNameLabel.Content = "Förnamn: " + State.User.FirstName;
             LastNameLabel.Content = "Efternamn: " + State.User.LastName;
             EmailLabel.Content = "E-post: " + State.User.Email;
             BirthdayLabel.Content = "Födelsedag: " + State.User.Birthday;
-                
+            }
+            
+
         }
     }
 }

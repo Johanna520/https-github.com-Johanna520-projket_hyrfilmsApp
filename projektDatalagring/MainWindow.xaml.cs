@@ -26,7 +26,7 @@ namespace FleraVyer
 
         private void GoHem_Click(object sender, RoutedEventArgs e)
         {
-            Title.Content = "Hem";
+            HemTitle.Content = "Hem";
             Hem.Visibility = Visibility.Visible;
             MinSida.Visibility = Visibility.Hidden;
             Filmer.Visibility = Visibility.Hidden;
@@ -34,7 +34,7 @@ namespace FleraVyer
 
         private void GoMinSida_Click(object sender, RoutedEventArgs e) //vad som sker när jag klickat på Mina sidor knappen
         {
-            Title.Content = "Mina sidor";
+            HemTitle.Content = "Mina sidor";
             Hem.Visibility = Visibility.Hidden;
             MinSida.Visibility = Visibility.Visible;
             Filmer.Visibility = Visibility.Hidden;
@@ -42,7 +42,7 @@ namespace FleraVyer
 
         private void GoFilmer_Click(object sender, RoutedEventArgs e) //vad som sker när man klickat på "Filmer"knappen
         {
-            Title.Content = "Filmer";
+            HemTitle.Content = "Filmer";
             Hem.Visibility = Visibility.Hidden;
             MinSida.Visibility = Visibility.Hidden;
             Filmer.Visibility = Visibility.Visible;

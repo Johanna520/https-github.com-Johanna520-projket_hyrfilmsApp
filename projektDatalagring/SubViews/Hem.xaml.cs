@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -15,7 +16,7 @@ using DatabaseConnection;
 namespace FleraVyer.SubViews
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for Hem.xaml
     /// </summary>
     public partial class Hem : UserControl
     {
