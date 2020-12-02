@@ -28,10 +28,11 @@ namespace Store
         private void LogIn_click(object sender, RoutedEventArgs e)
         {
             string userName = NameBox.Text.Trim();
+            State.User = DatabaseAPI.GetCustomerByName(userName);
 
             if (State.User != null)
             {
-                State.User = DatabaseAPI.GetCustomerByName(userName);
+               
                 var next_window = new MainWindow();
                 next_window.Show();
 
