@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+// skriv in fler queries, vad hände i varje steg? 
 
 namespace DatabaseConnection
 {
@@ -24,11 +25,13 @@ namespace DatabaseConnection
                 .ToList();
         }
 
-        public static Customer GetCustomerByName(string name)
+        public static Customer GetCustomerByName(string FirstName)
         {
             return ctx.Customers
-                .FirstOrDefault(c => c.FirstName.ToLower() == name.ToLower());
+                .FirstOrDefault(c => c.FirstName.ToLower() == FirstName.ToLower());
         }
+
+
 
         public static bool RegisterSale(Customer customer, Movie movie)
         {

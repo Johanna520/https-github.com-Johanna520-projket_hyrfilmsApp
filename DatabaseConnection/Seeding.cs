@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 namespace DatabaseConnection
 {
     class Seeding
-    {
+    {// rensa upp först för att inte bli dubletter? varför ändras idnr hela tiden? 
         static void Main()
         {
             using (var ctx = new Context())

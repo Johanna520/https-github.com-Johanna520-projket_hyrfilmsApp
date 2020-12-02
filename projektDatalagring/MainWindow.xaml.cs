@@ -32,15 +32,15 @@ namespace FleraVyer
             Filmer.Visibility = Visibility.Hidden;
         }
 
-        private void GoMinSida_Click(object sender, RoutedEventArgs e)
+        private void GoMinSida_Click(object sender, RoutedEventArgs e) //vad som sker när jag klickat på Mina sidor knappen
         {
-            Title.Content = "MinSida";
+            Title.Content = "Mina sidor";
             Hem.Visibility = Visibility.Hidden;
             MinSida.Visibility = Visibility.Visible;
             Filmer.Visibility = Visibility.Hidden;
         }
 
-        private void GoFilmer_Click(object sender, RoutedEventArgs e)
+        private void GoFilmer_Click(object sender, RoutedEventArgs e) //vad som sker när man klickat på "Filmer"knappen
         {
             Title.Content = "Filmer";
             Hem.Visibility = Visibility.Hidden;

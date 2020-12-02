@@ -7,7 +7,7 @@
         xmlns:sub="clr-namespace:FleraVyer.SubViews"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="Black">
         <!-- 
             Ett grid för att dela in mitt fönster i en del som alla 
             vyer delar och en del som roteras ut
@@ -22,13 +22,13 @@
         </Grid.ColumnDefinitions>
 
         <!-- Titeln längst upp -->
-        <Label Grid.Column="1" Grid.Row="0" Name="Title" Content="Hem" FontSize="40" HorizontalContentAlignment="Center"></Label>
+        <Label Grid.Column="1" Grid.Row="0" Name="Title" Content="Hem" FontSize="40" HorizontalContentAlignment="Center" Foreground="White"></Label>
 
         <!-- Knapparna till vänster -->
         <StackPanel Grid.Column="0" Grid.Row="1" Margin="20">
-            <Button Height="100" Margin="0,0,0,10" Click="GoHem_Click">Hem</Button>
-            <Button Height="100" Margin="0,0,0,10" Click="GoMinSida_Click">MinSida</Button>
-            <Button Height="100" Margin="0,0,0,10" Click="GoFilmer_Click">Filmer</Button>
+            <Button Height="100" Margin="0,0,0,10" Click="GoHem_Click" Background="Black" Foreground="White">Hem</Button>
+            <Button Height="100" Margin="0,0,0,10" Click="GoMinSida_Click" Background="Black" Foreground="White">Mina sidor</Button>
+            <Button Height="100" Margin="0,0,0,10" Click="GoFilmer_Click" Background="Black" Foreground="White">Filmer</Button>
         </StackPanel>
 
         <!-- 

@@ -19,18 +19,18 @@ namespace FleraVyer.SubViews
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class Filmer : UserControl
+    public partial class Filmer : UserControl //kopplas ihop med usercontrol 
     {
         public Filmer()
         {
             InitializeComponent();
             int movie_skip_count = 0;
             int movie_take_count = 50;
-            State.Movies = DatabaseAPI.GetMovieSlice(movie_skip_count, movie_take_count);
+            State.Movies = DatabaseAPI.GetMovieSlice(movie_skip_count, movie_take_count); //här läggs  filmerna till från databasAPI samt info från movie-state
 
             int coloumn_count = MovieGrid.ColumnDefinitions.Count;
 
-            int row_count = (int)Math.Ceiling((double)State.Movies.Count / (double)coloumn_count);
+            int row_count = (int)Math.Ceiling((double)State.Movies.Count / (double)coloumn_count);//här kommer info från state.user
 
             for (int y = 0; y < row_count; y++)
             {
@@ -44,9 +44,9 @@ namespace FleraVyer.SubViews
                 {
                     int i = y * coloumn_count + x;
 
-                    if (i < State.Movies.Count)
+                    if (i < State.Movies.Count)//infor från state.movie
                     {
-                        var movie = State.Movies[i];
+                        var movie = State.Movies[i];//infor från state movie
 
                         var image = new Image()
                         {
@@ -86,12 +86,12 @@ namespace FleraVyer.SubViews
 
             int i = y * MovieGrid.ColumnDefinitions.Count + x;
 
-            State.Pick = State.Movies[i];
-
-            if (DatabaseAPI.RegisterSale(State.User, State.Pick))
-                MessageBox.Show("All is well and you can download your movie now.", "Sale Succeeded", MessageBoxButton.OK, MessageBoxImage.Information);
+            State.Pick = State.Movies[i]; //infor från pick, movie state
+            //DatabasAPI lägger till ny rental
+            if (DatabaseAPI.RegisterSale(State.User, State.Pick)) // här plockas user-info in från state, infor från pick  movie state
+                MessageBox.Show("Du kan nu ladda ner din hyrfilm.", "Nerladdningen lyckades!", MessageBoxButton.OK, MessageBoxImage.Information);
             else
-                MessageBox.Show("An error happened while buying the movie, please try again at a later time.", "Sale Failed!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                MessageBox.Show("FEL! Ett fel uppstod, vänligen försök ladda ner filmen igen.", "Nerladdningen misslyckades!", MessageBoxButton.OK, MessageBoxImage.Exclamation);
         }
     }
 }
