@@ -7,10 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="680">
     <Grid Background="Black">
-        <Label Name="FirstNameLabel" Content="" Foreground="White" FontSize="32" HorizontalAlignment="Center" Margin ="0,200,0,0" VerticalAlignment="Top"></Label>
-        <Label Name="LastNameLabel" Content="" Foreground="White" FontSize="32" HorizontalAlignment="Center" Margin ="0,180,0,0" VerticalAlignment="Top"></Label>
-        <Label Name="BirthdayLabel" Content="" Foreground="White" FontSize="32" HorizontalAlignment="Center" Margin ="0,120,0,0" VerticalAlignment="Top"></Label>
-        <Label Name="EmailLabel" Content="" Foreground="White" FontSize="32" HorizontalAlignment="Center" Margin ="0,100,0,0" VerticalAlignment="Top"></Label>
+        <Label Name="FirstNameLabel" Content="" Foreground="White" FontSize="32" HorizontalAlignment="Center" Margin ="0,100,0,0" VerticalAlignment="Top"></Label>
+        <Label Name="LastNameLabel" Content="" Foreground="White" FontSize="32" HorizontalAlignment="Center" Margin ="0,150,0,0" VerticalAlignment="Top"></Label>
+        <Label Name="BirthdayLabel" Content="" Foreground="White" FontSize="32" HorizontalAlignment="Center" Margin ="0,200,0,0" VerticalAlignment="Top"></Label>
+        <Label Name="EmailLabel" Content="" Foreground="White" FontSize="32" HorizontalAlignment="Center" Margin ="0,250,0,0" VerticalAlignment="Top"></Label>
     </Grid>
 </UserControl>
 

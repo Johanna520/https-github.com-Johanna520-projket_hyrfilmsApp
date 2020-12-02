@@ -6,17 +6,8 @@
              xmlns:local="clr-namespace:FleraVyer.SubViews"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="680">
-    <!--
-        d:DesignHeight="450" d:DesignWidth="680" kan sättas till det måttet
-        man förväntar sig när UserControl:en används men det det är inte satt
-        i sten. UserControls kan också stretchas som alla andra kontroller.
-    -->
-    <Grid>
-        <!--
-            Här är det bara att fylla på med vad som helst! :D 
-            Inga gränser och C# kod som bara gäller här kan
-            läggas till i 'Home.xaml.cs' med.
-        -->
-        
+    <Grid Background="Black">
+        <Label Name="FirstNameLabel" Content="Välkommen hem" Foreground="White" FontSize="32" HorizontalAlignment="Center" Margin ="0,200,0,0" VerticalAlignment="Top"></Label>
     </Grid>
+
 </UserControl>
