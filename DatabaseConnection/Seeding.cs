@@ -161,32 +161,3 @@ namespace DatabaseConnection
     }
 }
 
-/*
-                 * The Dark Knight: Action, Crime, Drama, Thriller
-                 * The Lord of the Rings: The Return of the King: Action, Adventure, Drama, Fantasy
-                 * Inception: Action, Adventure, Sci-Fi, Thriller
-                 * The Matrix: Action, Sci-Fi
-                 * Star Wars: Episode IV - A new Hope: Action, Adventure, Fantasy, Sci-Fi
-                 * The Lion King: Animation, Adventure, Drama, Family, Musical
-                 * WALL-E: Animation, Adventure, Family, Sci-Fi
-                 * Toy Story: Animatiom, Adventure, Comedy, Family, Fantasy
-                 * Up: Animation, Adventure, Comedy, Family
-                 * Finding Nemo: Animation, Adventure, Comedy, Family
-                 * Se7en: Crime, Drama, Mystery, Thriller
-                 * The silence of the lambs: Crime, Drama, Thriller
-                 * Joker: Crime, Drama, Thriller
-                 * Shutter Island: Mystery, Thriller
-                 * Gone Girl: Drama, Mystery, Thriller
-                 * Forest Gump: Drama, Romance
-                 * La la Land: Comedy, Drama, Music, Musical, Romance
-                 * Casablanca: Drama, Romance, War
-                 * Slumdog Millionare: Drama, Romance
-                 * La vita è bella: Comedy, Drama, Romance, War
-                 * The Shawshank Redemption: Drama
-                 * Schnindler's list: Biography, Drama, History
-                 * Pulp Fiction: Crime, Drama
-                 * The Good, the Bad and the Ugly: Western
-                 * Fight Club: Drama
-                 * Saving Private Ryan: Drama, War
-                 * Goodfellas: Biography, Crime, Drama
-                 */

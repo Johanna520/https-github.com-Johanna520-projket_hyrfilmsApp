@@ -31,6 +31,8 @@ namespace DatabaseConnection
                 .FirstOrDefault(c => c.FirstName.ToLower() == FirstName.ToLower());
         }
 
+       
+
 
 
         public static bool RegisterSale(Customer customer, Movie movie)
@@ -50,6 +52,15 @@ namespace DatabaseConnection
             }
 
         }
+        public static List<Movie> GetMovieByName(string title)
+        {
+            return ctx.Movies.AsEnumerable().Where(m => m.Title.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
+
+
+     
 
     }
+
 }
+

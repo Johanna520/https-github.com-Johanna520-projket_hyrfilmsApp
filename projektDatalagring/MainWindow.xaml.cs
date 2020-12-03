@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using DatabaseConnection;
 using FleraVyer.SubViews;
 
+
 namespace FleraVyer
 {
     public partial class MainWindow : Window
@@ -46,6 +47,12 @@ namespace FleraVyer
             Hem.Visibility = Visibility.Hidden;
             MinSida.Visibility = Visibility.Hidden;
             Filmer.Visibility = Visibility.Visible;
+        }
+
+        private void SearchMovieBox(object sender, MouseButtonEventArgs e)
+        {
+        
+            TextBox.Clear();
         }
     }
 }

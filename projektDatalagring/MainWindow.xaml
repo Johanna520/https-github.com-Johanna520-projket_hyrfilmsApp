@@ -26,16 +26,20 @@
 
         <!-- Knapparna till vänster -->
         <StackPanel Grid.Column="0" Grid.Row="1" Margin="20">
-            <Button Height="100" Margin="0,0,0,10" Click="GoHem_Click" Background="Black" Foreground="White">Hem</Button>
+            
+            <TextBox Name="TextBox" PreviewMouseLeftButtonDown="SearchMovieBox" Margin="0,0,0,10" Text="Sök efter film.." Grid.Column="3" Background="black" BorderBrush="White" BorderThickness="1.5" Foreground="White"/>
             <Button Height="100" Margin="0,0,0,10" Click="GoMinSida_Click" Background="Black" Foreground="White">Mina sidor</Button>
             <Button Height="100" Margin="0,0,0,10" Click="GoFilmer_Click" Background="Black" Foreground="White">Filmer</Button>
         </StackPanel>
 
 
         <Grid Grid.Column="1" Grid.Row="1">
+             
             <sub:Hem x:Name="Hem" Visibility="Hidden"></sub:Hem>
             <sub:MinSida x:Name="MinSida" Visibility="Hidden"></sub:MinSida>
             <sub:Filmer x:Name="Filmer" Visibility="Hidden"></sub:Filmer>
+            
         </Grid>
+        
     </Grid>
 </Window>

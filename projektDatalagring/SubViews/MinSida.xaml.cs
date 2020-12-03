@@ -21,16 +21,21 @@ namespace FleraVyer.SubViews
     public partial class MinSida : UserControl
     {
         public MinSida()
-        {
+        {   
+                
             InitializeComponent();
+        
+
             if (!DesignerProperties.GetIsInDesignMode(this))
             {
             FirstNameLabel.Content = "Förnamn: " + State.User.FirstName;
             LastNameLabel.Content = "Efternamn: " + State.User.LastName;
             EmailLabel.Content = "E-post: " + State.User.Email;
             BirthdayLabel.Content = "Födelsedag: " + State.User.Birthday;
+              
             }
-            
+
+             
 
         }
     }
