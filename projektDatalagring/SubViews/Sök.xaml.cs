@@ -23,14 +23,16 @@ namespace FleraVyer.SubViews
         public Sök()
         {
             InitializeComponent();
-        
+          
 
-                for (int y = 0; y < SearchGrid.RowDefinitions.Count; y++)
+            for (int y = 0; y < SearchGrid.RowDefinitions.Count; y++)
                 {
                     for (int x = 0; x < SearchGrid.ColumnDefinitions.Count; x++)
                     {
                         int i = y * SearchGrid.ColumnDefinitions.Count + x;
                         if (i < State.Movies.Count)
+
+
                         {
                             var movie = State.Movies[i];
 
@@ -94,6 +96,8 @@ namespace FleraVyer.SubViews
 
             TextBox.Clear();
         }
+
+
         private void Image_MouseUp(object sender, MouseButtonEventArgs e)
         {
             var x = Grid.GetColumn(sender as UIElement);

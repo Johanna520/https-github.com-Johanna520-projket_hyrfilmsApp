@@ -6,10 +6,39 @@
              xmlns:local="clr-namespace:FleraVyer.SubViews"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="680">
-    <Grid Name="SearchGrid">
+    <StackPanel>
+        <DockPanel Margin="50,50,50,20">
+            <TextBox Name="TextBox" PreviewMouseLeftButtonDown="SearchMovieBox"  Text="Sök efter film.." Background="black" BorderBrush="White" BorderThickness="1.5" Foreground="White"/>
+        </DockPanel>
+        <Grid Name="SearchGrid">               
+        <Grid.RowDefinitions>
+           
+            <RowDefinition Height="100"/>
+            
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
         
-        <TextBox Name="TextBox" PreviewMouseLeftButtonDown="SearchMovieBox" Margin="0,22,500,680" Text="Sök efter film.." Grid.Column="3" Background="black" BorderBrush="White" BorderThickness="1.5" Foreground="White"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
 
-    </Grid>
+           
+        </Grid.ColumnDefinitions>
+
+      
+
+
+    </Grid> 
+     </StackPanel>
+
+   
 
 </UserControl>
