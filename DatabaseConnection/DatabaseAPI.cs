@@ -15,7 +15,6 @@ namespace DatabaseConnection
         {
             ctx = new Context();
         }
-
         public static List<Movie> GetMovieSlice(int skip_x, int take_x)
         {
             return ctx.Movies
@@ -24,20 +23,14 @@ namespace DatabaseConnection
                 .Take(take_x)
                 .ToList();
         }
-
         public static Customer GetCustomerByName(string FirstName)
         {
             return ctx.Customers
                 .FirstOrDefault(c => c.FirstName.ToLower() == FirstName.ToLower());
         }
-
-       
-
-
-
         public static bool RegisterSale(Customer customer, Movie movie)
         {
-            try 
+            try
             {
                 ctx.Add(new Rental() { RentalDate = DateTime.Now, Customer = customer, Movie = movie });
 
@@ -56,9 +49,17 @@ namespace DatabaseConnection
         {
             return ctx.Movies.AsEnumerable().Where(m => m.Title.Contains(title, StringComparison.OrdinalIgnoreCase)).ToList();
         }
-
-
-     
+        public static List<Movie> GetMovieByRating(int a, int b)
+        {
+            return ctx.Movies.OrderByDescending(r => r.ImbdRating).Skip(a).Take(b).ToList();
+        }
+        public static List<Movie> GetMovieByYear(int year)
+        {
+            return ctx.Movies
+                .OrderBy(m => m.Year)
+                .Where(m => m.Year == year)
+                .ToList(); 
+        }
 
     }
 

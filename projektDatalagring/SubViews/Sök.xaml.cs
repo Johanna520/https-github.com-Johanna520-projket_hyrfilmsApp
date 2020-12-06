@@ -23,7 +23,6 @@ namespace FleraVyer.SubViews
         public Sök()
         {
             InitializeComponent();
-          
 
             for (int y = 0; y < SearchGrid.RowDefinitions.Count; y++)
                 {
