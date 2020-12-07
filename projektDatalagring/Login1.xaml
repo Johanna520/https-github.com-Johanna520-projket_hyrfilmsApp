@@ -8,8 +8,8 @@
         Title="Login" Height="450" Width="800">
     
     <Grid Background="Black">
-        <Label Foreground="White" FontSize="32" Content="Welcome!" HorizontalAlignment="Center" Margin ="0,150,0,0" VerticalAlignment="Top"></Label>
-        <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="0,210,0,0" Text=" Enter your name..." TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Click="LogIn_click" Content="ENTER" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top"></Button>
+        <Label Foreground="White" FontSize="32" Content="Välkommen!" HorizontalAlignment="Center" Margin ="0,150,0,0" VerticalAlignment="Top"></Label>
+        <TextBox Name="NameBox" HorizontalAlignment="Center" Margin="0,210,0,0" Text="Skriv in ditt namn..." TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Click="LogIn_click" Content="LOGGA IN" HorizontalAlignment="Center" Margin="0,250,0,0" VerticalAlignment="Top"></Button>
     </Grid>
 </Window>
