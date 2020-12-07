@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
-// skriv in fler queries, vad hände i varje steg? 
 
 namespace DatabaseConnection
 {

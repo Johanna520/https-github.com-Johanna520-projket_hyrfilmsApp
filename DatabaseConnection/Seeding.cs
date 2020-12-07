@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace DatabaseConnection
 {
     public class Seeding
-    {// rensa upp först för att inte bli dubletter? varför ändras idnr hela tiden? 
+    {
         static void Main()
         {
             using (var ctx = new Context())
@@ -56,54 +56,54 @@ namespace DatabaseConnection
 
                 List<LeadActor> LeadActors = new List<LeadActor>
                 { 
-                    new LeadActor {FirstName ="Christian",      LastName ="Bale"},              //0The Dark Knight
-                    new LeadActor {FirstName ="Heath",          LastName ="Ledger"},            //1
-                    new LeadActor {FirstName ="Elijah",         LastName ="Wood"},              //2The Lord of the Ring
-                    new LeadActor {FirstName ="Ian",            LastName ="McKellen"},          //3
-                    new LeadActor {FirstName ="Leonardo ",      LastName ="DiCaprio"},          //4 //Inception
-                    new LeadActor {FirstName ="Joseph ",        LastName ="Gordon-Levitt"},     //5
-                    new LeadActor {FirstName ="Keanu",          LastName ="Reeves"},            //6 //Matrix
-                    new LeadActor {FirstName ="Laurence",       LastName ="Fishburne"},         //7
-                    new LeadActor {FirstName ="Harrison ",      LastName ="Ford"},              //8 Star Wars
-                    new LeadActor {FirstName ="Carrie ",        LastName ="Fisher"},            //9
-                    new LeadActor {FirstName ="Morgan",         LastName ="Freeman"},           //10 //se7en
-                    new LeadActor {FirstName ="Brad",           LastName ="Pitt"},              //11
-                    new LeadActor {FirstName ="Jodie",          LastName ="Foster"},            //12 //The Silence of the Lambs
-                    new LeadActor {FirstName ="Anthony",        LastName ="Hopkins"},           //13
-                    new LeadActor {FirstName ="Joaquin",        LastName ="Phoenix"},           //14 //Joker
-                    new LeadActor {FirstName ="Robert",         LastName ="De Niro"},           //15
-                    new LeadActor {FirstName ="Emily",          LastName ="Mortimer"},          //4 + 16//Shutter Island 
-                    new LeadActor {FirstName ="Ben",            LastName ="Affleck"},           //17 //Gone Girl
-                    new LeadActor {FirstName ="Rosamund ",      LastName ="Pike"},              //18
-                    new LeadActor {FirstName ="Tom",            LastName ="Hanks"},             //19//Forest Gump
-                    new LeadActor {FirstName ="Robin",          LastName ="Wright"},            //20
-                    new LeadActor {FirstName ="Ryan ",          LastName ="Gosling"},           //21//La La Land
-                    new LeadActor {FirstName ="Emma",           LastName ="Stone"},             //22
-                    new LeadActor {FirstName ="Humphrey",       LastName ="Bogart"},            //23//Casablanca
-                    new LeadActor {FirstName ="Ingrid",         LastName ="Bergman"},           //24
-                    new LeadActor {FirstName ="Dev",            LastName ="Patel"},             //25//Slumdog Millionare
-                    new LeadActor {FirstName ="Freida",         LastName ="Pinto"},             //26
-                    new LeadActor {FirstName ="Roberto",        LastName ="Benigni"},           //27//La vita è bella
-                    new LeadActor {FirstName ="Nicoletta",      LastName ="Braschi"},           //28
-                    new LeadActor {FirstName ="Tim",            LastName ="Robbins"},           //29+10//The Shawshank Redemption 
-                    new LeadActor {FirstName ="Liam",           LastName ="Nelson"},            //30//Schindler's List      
-                    new LeadActor {FirstName ="Ralph",          LastName ="Finess"},            //31
-                    new LeadActor {FirstName ="John",           LastName ="Travolta"},          //32//Pulp Fiction   
-                    new LeadActor {FirstName ="Uma",            LastName ="Thurman"},           //33
-                    new LeadActor {FirstName ="Clint",          LastName ="Eastwood"},          //34//The Good, the Bad and the Ugly  
-                    new LeadActor {FirstName ="Eli",            LastName ="Wallach"},           //35
-                    new LeadActor {FirstName ="Edward",         LastName ="Norton"},            //11+36 //Flight Club  
-                    new LeadActor {FirstName ="Matt",           LastName ="Damon"},             //19+37 //Saving Private Ryan
-                    new LeadActor {FirstName ="Ray",            LastName ="Liotta"},            //15+38 //Goodfellas
-                    new LeadActor {FirstName = "Ellen",         LastName = "DeGeneres"},       //39, Finding Nemo
-                    new LeadActor {FirstName = "Albert",        LastName ="Brooks" },            //40
-                    new LeadActor {FirstName = "Matthew",       LastName ="Broderick"},        //41 Lion King
-                    new LeadActor {FirstName = "Jeremy",        LastName ="Irons" },             //42
-                    new LeadActor {FirstName = "Ben",           LastName ="Burtt" },                //43 Wall-E
-                    new LeadActor {FirstName = "Elissa",        LastName ="Knight" },              //44
-                    new LeadActor {FirstName = "Tim",           LastName ="Allen" },           //45 19, ToyStory
-                    new LeadActor {FirstName = "Edward",        LastName ="Asner" },        //46Up
-                    new LeadActor {FirstName = "Jordan",        LastName ="Nagai" }     //47
+                    new LeadActor {FirstName ="Christian",      LastName ="Bale"},              
+                    new LeadActor {FirstName ="Heath",          LastName ="Ledger"},            
+                    new LeadActor {FirstName ="Elijah",         LastName ="Wood"},              
+                    new LeadActor {FirstName ="Ian",            LastName ="McKellen"},          
+                    new LeadActor {FirstName ="Leonardo ",      LastName ="DiCaprio"},                         
+                    new LeadActor {FirstName ="Joseph ",        LastName ="Gordon-Levitt"},        
+                    new LeadActor {FirstName ="Keanu",          LastName ="Reeves"},                         
+                    new LeadActor {FirstName ="Laurence",       LastName ="Fishburne"},            
+                    new LeadActor {FirstName ="Harrison ",      LastName ="Ford"},                           
+                    new LeadActor {FirstName ="Carrie ",        LastName ="Fisher"},               
+                    new LeadActor {FirstName ="Morgan",         LastName ="Freeman"},                       
+                    new LeadActor {FirstName ="Brad",           LastName ="Pitt"},                  
+                    new LeadActor {FirstName ="Jodie",          LastName ="Foster"},                                           
+                    new LeadActor {FirstName ="Anthony",        LastName ="Hopkins"},               
+                    new LeadActor {FirstName ="Joaquin",        LastName ="Phoenix"},                       
+                    new LeadActor {FirstName ="Robert",         LastName ="De Niro"},               
+                    new LeadActor {FirstName ="Emily",          LastName ="Mortimer"},                                   
+                    new LeadActor {FirstName ="Ben",            LastName ="Affleck"},                           
+                    new LeadActor {FirstName ="Rosamund ",      LastName ="Pike"},                  
+                    new LeadActor {FirstName ="Tom",            LastName ="Hanks"},                              
+                    new LeadActor {FirstName ="Robin",          LastName ="Wright"},                
+                    new LeadActor {FirstName ="Ryan ",          LastName ="Gosling"},                           
+                    new LeadActor {FirstName ="Emma",           LastName ="Stone"},                 
+                    new LeadActor {FirstName ="Humphrey",       LastName ="Bogart"},                            
+                    new LeadActor {FirstName ="Ingrid",         LastName ="Bergman"},               
+                    new LeadActor {FirstName ="Dev",            LastName ="Patel"},                                     
+                    new LeadActor {FirstName ="Freida",         LastName ="Pinto"},                 
+                    new LeadActor {FirstName ="Roberto",        LastName ="Benigni"},                                
+                    new LeadActor {FirstName ="Nicoletta",      LastName ="Braschi"},               
+                    new LeadActor {FirstName ="Tim",            LastName ="Robbins"},                                             
+                    new LeadActor {FirstName ="Liam",           LastName ="Nelson"},                                        
+                    new LeadActor {FirstName ="Ralph",          LastName ="Finess"},                
+                    new LeadActor {FirstName ="John",           LastName ="Travolta"},                               
+                    new LeadActor {FirstName ="Uma",            LastName ="Thurman"},           
+                    new LeadActor {FirstName ="Clint",          LastName ="Eastwood"},                                                
+                    new LeadActor {FirstName ="Eli",            LastName ="Wallach"},           
+                    new LeadActor {FirstName ="Edward",         LastName ="Norton"},                                   
+                    new LeadActor {FirstName ="Matt",           LastName ="Damon"},                     
+                    new LeadActor {FirstName ="Ray",            LastName ="Liotta"},                        
+                    new LeadActor {FirstName = "Ellen",         LastName = "DeGeneres"},           
+                    new LeadActor {FirstName = "Albert",        LastName ="Brooks" },              
+                    new LeadActor {FirstName = "Matthew",       LastName ="Broderick"},                  
+                    new LeadActor {FirstName = "Jeremy",        LastName ="Irons" },             
+                    new LeadActor {FirstName = "Ben",           LastName ="Burtt" },                           
+                    new LeadActor {FirstName = "Elissa",        LastName ="Knight" },              
+                    new LeadActor {FirstName = "Tim",           LastName ="Allen" },                        
+                    new LeadActor {FirstName = "Edward",        LastName ="Asner" },        
+                    new LeadActor {FirstName = "Jordan",        LastName ="Nagai" }     
 
                 };
                 ctx.AddRange(LeadActors);
